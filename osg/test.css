@@ -1,5 +1,13 @@
 html {
+    color: var(--font-color,var(--gray-dark,#262626));
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    width: 100%;
     font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif,emoji,apple color emoji;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 body {
@@ -9,6 +17,45 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: .25rem;
+    background-color: var(--main-background,#fff);
+    box-sizing: border-box;
+    max-width: 45rem;
+    width: 100%;
+    overflow-x: hidden
+}
+
+heading {
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem
+}
+
+h1 {
+    font-size: 2rem
+}
+
+h2 {
+    font-size: 1.375rem;
+    line-height: 1.875rem
+}
+
+h3,h4,h5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.5rem
 }
 
 .fi {
@@ -102,20 +149,6 @@ body {
     background-image: url(img/shoal.png);
 }
 
-main {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 1.5rem;
-    border-radius: .25rem;
-    background-color: var(--main-background,#fff);
-    box-sizing: border-box;
-    max-width: 45rem;
-    width: 100%;
-    overflow-x: hidden
-}
-
 @media screen and (min-width: 0rem) {
     body {
         margin:0
@@ -165,6 +198,35 @@ main {
     body main .infobox {
         width: 50%;
         margin-left: 2rem
+    }
+}
+
+@media screen and (min-width: 50rem) {
+    main {
+        width:70%
+    }
+}
+
+@media screen and (min-width: 100rem) {
+    main {
+        width:35%
+    }
+}
+
+@media screen and (min-width: 35%) {
+    main {
+        margin-top:0;
+        margin-bottom: 0;
+        width: 35%
+    }
+
+    main .infobox {
+        width: 100%;
+        color: red
+    }
+
+    .portrait {
+        display: none!important
     }
 }
 
@@ -618,4 +680,57 @@ article blockquote {
 @font-face {
     font-family: emoji;
     src: url(NotoEmoji.ttf)format("truetype")
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem
+}
+
+nav .active {
+    background-color: var(--highlight-background,var(--gray-light));
+    color: var(--highlight);
+    box-shadow: inset 0 -502px 0 -500px var(--highlight)
+}
+
+nav .navbar {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    list-style: none;
+    background-color: transparent
+}
+
+nav .navbar .navlink {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    margin-right: .5rem;
+    line-height: 1.25rem;
+    display: block;
+    padding: .25rem;
+    position: static;
+    white-space: nowrap
+}
+
+nav .navbar .navlink:first-child {
+    margin-left: 0
+}
+
+nav .navbar .navlink:last-child {
+    margin-right: 0
+}
+
+nav .navbar .navlink:hover {
+    background-color: var(--highlight-background,var(--gray-light))
+}
+
+nav .navbar .navlink:hover a {
+    color: var(--highlight,var(--gray-medium))
 }
