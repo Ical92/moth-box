@@ -519,6 +519,11 @@ table.infobox img {
 }
 
 article blockquote {
+    border-inline-start:2px solid var(--color-gray);
+    font-style: italic;
+}
+
+article blockquote {
     padding-left: 1rem;
     padding-right: 1rem;
     margin-top: 1rem;
@@ -526,7 +531,19 @@ article blockquote {
     margin-left: 0;
     margin-right: 0;
     border-left: 2px solid var(--highlight);
-    border-inline-start:2px solid var(--color-gray);font-style: italic
+}
+
+article blockquote p:first-child {
+    margin-top: 0;
+}
+
+article blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+article blockquote blockquote {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .note {
@@ -563,6 +580,13 @@ article blockquote {
     grid-area: text
 }
 
+.note.stripe {
+    background-color: var(--highlight-background,var(--gray-light));
+    background-size: 5px 5px;
+    background-image: repeating-linear-gradient(135deg,var(--highlight-background,var(--gray-light,#f0f0f6)) 0,var(--highlight-background,var(--gray-light,#f0f0f6)) 1px,var(--main-background,#fff) 0,var(--main-background,#fff) 50%);
+    padding: .5rem;
+}
+
 .sublist-container {
   margin: 1rem 0;
   font-size: 14px;
@@ -579,8 +603,8 @@ article blockquote {
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  background: #F8F9FA;
-  border: 1px solid #f0f0f6;
+  background: var(--highlight-background, #F8F9FA);
+  border: 1px solid var(--highlight-background, #f0f0f6);
   border-radius: 4px;
   text-decoration: none;
   color: var(--highlight);
