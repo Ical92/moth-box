@@ -149,6 +149,42 @@ h6 {
     background-image: url(img/shoal.png);
 }
 
+.fi-mw.fis {
+    background-image: url(img/mw.png);
+}
+
+.fi-ns.fis {
+    background-image: url(img/ns.png);
+}
+
+.fi-vi.fis {
+    background-image: url(img/vi.png);
+}
+
+.fi-sd.fis {
+    background-image: url(img/sd.png);
+}
+
+.fi-clip.fis {
+    background-image: url(img/clip_seal.png);
+}
+
+.fi-solcon.fis {
+    background-image: url(img/solcon.png);
+}
+
+.fi-pris.fis {
+    background-image: url(img/pris.png);
+}
+
+.fi-vkxs.fis {
+    background-image: url(img/vkxs.png);
+}
+
+.fi-arf.fis {
+    background-image: url(img/arf.png);
+}
+
 @media screen and (min-width: 0rem) {
     body {
         margin:0
@@ -371,7 +407,7 @@ header.info .headcrumbs ul {
 }
 
 header.info .headcrumbs a {
-    color: rgb(51, 65, 85)
+    color: var(--font-color);
 }
 
 header.info .headcrumbs .seperator {
