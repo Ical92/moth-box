@@ -129,6 +129,10 @@ h6 {
     background-image: url(img/ship-land.png);
 }
 
+.fi-ship-mw.fis {
+    background-image: url(img/ship-mw.png);
+}
+
 .fi-ship-removed.fis {
     background-image: url(img/ship-removed.png);
 }
