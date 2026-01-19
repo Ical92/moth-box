@@ -794,3 +794,46 @@ nav .navbar .navlink:hover {
 nav .navbar .navlink:hover a {
     color: var(--highlight,var(--gray-medium))
 }
+
+.side {
+    width: 15rem;
+    margin: 0;
+    position: absolute;
+    border-radius: .25rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding: 1rem;
+    right: calc((100vw - 50rem)/2 - 220px);
+    background-color: var(--body-background);
+    z-index: 100;
+    transition: border .3s ease;
+}
+
+.side p {
+    margin: 0;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: var(--font-color);
+}
+
+.side blockquote {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: var(--font-color);
+    margin-bottom: 0;
+}
+
+h2 a.anchor,h3 a.anchor {
+    color: var(--highlight);
+    opacity: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+h2 a.anchor:hover,h3 a.anchor:hover {
+    opacity: initial
+}
+
+h2 a.anchor:focus,h3 a.anchor:focus {
+    opacity: initial
+}
