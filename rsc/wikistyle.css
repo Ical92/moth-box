@@ -916,6 +916,7 @@ h2 a.anchor:focus,h3 a.anchor:focus {
     color: var(--highlight);
     font-size: 1rem;
     font-weight: bold;
+    padding-top: 0;
 }
 
 .timeline li.section h3 {
