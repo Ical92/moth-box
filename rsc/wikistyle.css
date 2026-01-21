@@ -627,6 +627,38 @@ article blockquote blockquote {
     padding: .5rem;
 }
 
+.note.warn {
+    background-color: #F9A90033;
+    background-size: 5px 5px;
+    background-image: repeating-linear-gradient(135deg, #F9A90033 0, #F9A90033 1px ,var(--main-background,#fff) 0,var(--main-background,#fff) 50%);
+    padding: .5rem;
+    font-weight: bold;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 0 0;
+    grid-template-columns: 1.5rem auto 1.5rem;
+    grid-template-areas: "l-icon text r-icon"
+}
+
+.note.warn::before {
+    content: "⚠";
+    font-weight: initial;
+    grid-area: "l-icon";
+    margin: auto;
+}
+
+.note.warn::after {
+    content: "⚠";
+    font-weight: initial;
+    grid-area: "r-icon";
+    margin: auto;
+}
+
+.note.warn p {
+    grid-area: text;
+}
+
 .sublist-container {
   margin: 1rem 0;
   font-size: 14px;
@@ -843,14 +875,20 @@ h2 a.anchor:focus,h3 a.anchor:focus {
 }
 
 .timeline {
-    border-left: 2px solid var(--highlight);
     list-style: none;
-    display:inline-block;
-    padding-left: 1rem;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .timeline li+li{
-    margin-top: 0.5rem;
+    margin-top: 0;
+    padding-top: 0.5rem;
+}
+
+.timeline li {
+    border-left: 2px solid var(--highlight);
+    padding-left: 1rem;
 }
 
 .timeline li p {
@@ -867,7 +905,28 @@ h2 a.anchor:focus,h3 a.anchor:focus {
 }
 
 .timeline li p:first-child::before {
+    font-size: 16px;
     content: "►";
     position: relative;
     right: 0.25rem;
+}
+
+.timeline li.section {
+    display:inline;
+    color: var(--highlight);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.timeline li.section h3 {
+    color: var(--gray-dark, #262626);
+    display:inline;
+}
+
+.timeline li.gap {
+    color: var(--highlight);
+    min-height: 2rem;
+    border-left-style: dashed;
+    font-size: 1rem;
+    font-weight: bold;
 }
