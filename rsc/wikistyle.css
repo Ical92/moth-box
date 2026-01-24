@@ -189,20 +189,20 @@ h6 {
     background-image: url(img/arf.png);
 }
 
-.fi-pgf.fis {
-    background-image: url(img/pgf.png);
+.fi-pgf-4x3 {
+    background-image: url(img/pgf-4x3.png);
 }
 
-.fi-inteq.fis {
-    background-image: url(img/inteq.png);
+.fi-inteq-4x3 {
+    background-image: url(img/inteq-4x3.png);
 }
 
-.fi-ngr.fis {
-    background-image: url(img/ngr.png);
+.fi-ngr-4x3 {
+    background-image: url(img/ngr-4x3.png);
 }
 
-.fi-utf.fis {
-    background-image: url(img/utf.png);
+.fi-utf-4x3 {
+    background-image: url(img/utf-4x3.png);
 }
 
 @media screen and (min-width: 0rem) {
