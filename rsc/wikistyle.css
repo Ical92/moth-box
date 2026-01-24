@@ -205,6 +205,10 @@ h6 {
     background-image: url(img/utf-4x3.png);
 }
 
+.fi-solcon-4x3.fis {
+    background-image: url(img/solcon-4x3.png);
+}
+
 @media screen and (min-width: 0rem) {
     body {
         margin:0
