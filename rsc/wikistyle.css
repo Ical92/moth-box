@@ -189,6 +189,22 @@ h6 {
     background-image: url(img/arf.png);
 }
 
+.fi-pgf.fis {
+    background-image: url(img/pgf.png);
+}
+
+.fi-pgf.inteq {
+    background-image: url(img/inteq.png);
+}
+
+.fi-ngr.fis {
+    background-image: url(img/ngr.png);
+}
+
+.fi-utf.fis {
+    background-image: url(img/utf.png);
+}
+
 @media screen and (min-width: 0rem) {
     body {
         margin:0
